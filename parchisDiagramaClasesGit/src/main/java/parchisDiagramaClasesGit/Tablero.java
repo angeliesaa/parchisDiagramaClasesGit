@@ -9,16 +9,18 @@ package parchisDiagramaClasesGit;
 public class Tablero {
 
 	private int numCasillas;
-	private boolean[] casillas;
+	
+	private int[] casillas; //Cada casilla tiene asociado un numero (0: no ficha, 1: ficha jugador 1, 2: ficha jugador 2, 3: 2 fichas jugador 1, 4: 2 fichas jugador 2)
 	
 	/**
 	 * 
 	 */
 	public Tablero() {
 		
-		numCasillas = 21;
-		casillas = new boolean[numCasillas];
-		casillas[0] = true;
+		numCasillas = 21; 
+		
+		casillas = new int [numCasillas];
+		
 		
 	}
 	
@@ -28,15 +30,15 @@ public class Tablero {
 	public Tablero(int numCasillas) {	
 		
 		this.numCasillas = numCasillas;
-		casillas = new boolean[numCasillas+1];
-		casillas[0] = true;
+		
+		casillas = new int[numCasillas+1];
+		
 		
 	}
 	
-	public void cambiarFicha(int origen, int destino) {
+	public void cambiarFicha(int origen, int destino  , Ficha ficha) {
 		
-		casillas[origen] = false;
-		casillas[destino] = true;
+		// IMPLEMENTAR
 		
 	}
 	
@@ -46,7 +48,7 @@ public class Tablero {
 		
 	}
 	
-	public boolean[] consultarCasillas() {
+	public int[] consultarCasillas() {
 		
 		return casillas;
 		
